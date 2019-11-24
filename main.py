@@ -1,46 +1,38 @@
-# From https://www.baldengineer.com/raspberry-pi-gui-tutorial.html 
-# by James Lewis (@baldengineer)
-# Minimal python code to start PyQt5 GUI
-#
-
-# always seem to need this
+from PyQt5.QtWidgets import QWidget, QCheckBox, QApplication
+from PyQt5.QtCore import Qt
 import sys
 
-# This gets the Qt stuff
-import PyQt5
-from PyQt5.QtWidgets import *
-
-# This is our window from QtCreator
-import mainwindow_auto
-
-# create class for our Raspberry Pi GUI
-class MainWindow(QMainWindow, mainwindow_auto.Ui_MainWindow):
-    # access variables inside of the UI's file
-
-    ### functions for the buttons to call
-    def pressedOnButton(self):
-        print ("Pressed On!")
-
-    def pressedOffButton(self):
-        print ("Pressed Off!")
-
+class Example(QWidget):
+    
     def __init__(self):
-        super(self.__class__, self).__init__()
-        self.setupUi(self) # gets defined in the UI file
+        super().__init__()
+        
+        self.initUI()
+        
+        
+    def initUI(self):      
 
-        ### Hooks to for buttons
-        self.btnOn.clicked.connect(lambda: self.pressedOnButton())
-        self.btnOff.clicked.connect(lambda: self.pressedOffButton())
-
-# I feel better having one of these
-def main():
-    # a new app instance
+        cb = QCheckBox('Show title', self)
+        cb.move(20, 20)
+        cb.toggle()
+        cb.stateChanged.connect(self.changeTitle)
+        
+        self.setGeometry(300, 300, 250, 150)
+        self.setWindowTitle('QCheckBox')
+        self.show()
+        
+        
+    def changeTitle(self, state):
+      
+        if state == Qt.Checked:
+            self.setWindowTitle('QCheckBox')
+        else:
+            self.setWindowTitle(' ')
+            
+        
+if __name__ == '__main__':
+    
     app = QApplication(sys.argv)
-    form = MainWindow()
-    form.show()
-    # without this, the script exits immediately.
+    ex = Example()
     sys.exit(app.exec_())
 
-# python bit to figure how who started This
-if __name__ == "__main__":
-    main()
