@@ -1,7 +1,9 @@
-RaspberyPi Python app
+RaspberyPi Python app FeedMe
 ==
 
-(c) 2019 Jolanda Versteeg en Anne Jan Brouwer
+©️ 2019 Jolanda Versteeg and Anne Jan Brouwer
+
+Choose some words, get a nice label 😄
 
 Requirements
 --
