@@ -46,13 +46,13 @@ class FeedMe(QWidget):
         self.label_intro = QLabel(self)
         self.label_intro.move(20, 20)
         self.label_intro.setFont(QFont('SansSerif', 32))
-        self.label_intro.setMaximumWidth(460)
-        self.label_intro.setMinimumWidth(460)
+        self.label_intro.setMaximumWidth(440)
+        self.label_intro.setMinimumWidth(440)
         self.label_intro.setWordWrap(True)
         self.label_intro.setText(INTRO)
-        self.label_intro.mousePressEvent = self.start_question
         self.label_intro.setAlignment(Qt.AlignCenter)
         self.label_intro.hide()
+        self.label_intro.mousePressEvent = self.start_question
 
         self.button1 = QPushButton("Button 1 text", self)
         self.button1.move(20, 80)
@@ -77,23 +77,25 @@ class FeedMe(QWidget):
         self.label_text.setMinimumWidth(460)
         self.label_text.setWordWrap(True)
         self.label_text.hide()
+        self.label_text.mouseDoubleClickEvent = self.reset_app
 
         self.setGeometry(300, 300, 480, 300)
         self.setWindowTitle('Mooie demo app')
         self.show()
-        self.reset_app()
+        self.reset_app(True)
 
-    def reset_app(self):
+    def reset_app(self, press):
         """Start from scratch (new curstomer)"""
-        self.question = 0
-        self.a_chosen = 0
-        self.b_chosen = 0
-        self.label_image.hide()
-        self.label_text.hide()
-        self.button1.hide()
-        self.button2.hide()
-        self.label_intro.show()
-        self.update_question()
+        if press:
+            self.question = 0
+            self.a_chosen = 0
+            self.b_chosen = 0
+            self.label_image.hide()
+            self.label_text.hide()
+            self.button1.hide()
+            self.button2.hide()
+            self.label_intro.show()
+            self.update_question()
 
     def start_question(self, press):
         """Start asking questions"""
