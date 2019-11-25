@@ -9,6 +9,7 @@ Choose some words, get a fitting label.
 
 import random
 import sys
+# pylint: disable=import-error
 from PyQt5.QtWidgets import QWidget, QPushButton, QApplication, QLabel
 from PyQt5.QtGui import QPixmap, QFont
 from PyQt5.QtCore import Qt
@@ -31,6 +32,8 @@ WORD_A = 'mooie'
 WORD_B = 'lelijke'
 TITLE = 'Mooi %s Lelijk %s'
 
+
+# pylint: disable=too-many-instance-attributes
 class FeedMe(QWidget):
     """Feed me some data and I'll show you a nice label"""
     def __init__(self):
