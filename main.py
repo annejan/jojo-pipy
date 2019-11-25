@@ -84,7 +84,7 @@ class FeedMe(QWidget):
         self.setGeometry(0, 0, 480, 300)
         self.setWindowTitle('Mooie demo app')
         self.show()
-        # self.showFullScreen()     # Zet dit aan voor fullscreen op de Pi 😄
+        # self.showFullScreen()     # enable to run full screen on Pi 😄
         self.reset_app(True)
 
     def reset_app(self, press):
@@ -123,7 +123,7 @@ class FeedMe(QWidget):
     def update_question(self):
         """Choose two new words"""
         self.which_list = bool(random.getrandbits(1))
-        self.button1.setText(random.choice((LIST_A, LIST_B)[self.which_list]).title())
+        self.button1.setText(random.choice((LIST_A, LIST_B)[self.which_list]).title())  # .title() capitalised word
         self.button2.setText(random.choice((LIST_B, LIST_A)[self.which_list]).title())
 
     def show_label(self):
@@ -137,6 +137,7 @@ class FeedMe(QWidget):
         self.setWindowTitle(text)
 
 
+# Start the FeedMe app and quit nicely when Ctrl+Q pressed
 if __name__ == '__main__':
     APP = QApplication(sys.argv)
     FeedMe()
