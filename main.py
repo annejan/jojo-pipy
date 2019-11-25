@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """
-RaspberryPi Python app FeedMe
+        RaspberryPi Python app FeedMe
 
-(c) 2019 Jolanda Versteeg and Anne Jan Brouwer
+© 2019 Jolanda Versteeg and Anne Jan Brouwer
 
-Choose some words, get a fitting label.
+Choose some words, get a nice fitting product label.
+Double click the label to reset the app.
 """
 
 import random
@@ -79,9 +80,10 @@ class FeedMe(QWidget):
         self.label_text.hide()
         self.label_text.mouseDoubleClickEvent = self.reset_app
 
-        self.setGeometry(300, 300, 480, 300)
+        self.setGeometry(0, 0, 480, 300)
         self.setWindowTitle('Mooie demo app')
         self.show()
+        # self.showFullScreen()     # Zet dit aan voor fullscreen op de Pi 😄
         self.reset_app(True)
 
     def reset_app(self, press):
@@ -125,11 +127,13 @@ class FeedMe(QWidget):
 
     def show_label(self):
         """Show payoff label"""
+        text = PAYOFF % (WORD_A, WORD_B)[self.a_chosen < self.b_chosen]
         self.button1.hide()
         self.button2.hide()
         self.label_image.show()
-        self.label_text.setText(PAYOFF % (WORD_A, WORD_B)[self.a_chosen < self.b_chosen])
+        self.label_text.setText(text)
         self.label_text.show()
+        self.setWindowTitle(text)
 
 
 if __name__ == '__main__':
