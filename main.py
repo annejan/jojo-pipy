@@ -35,7 +35,7 @@ class FeedMe(QWidget):
         self.label_intro.setText('Klik hier om te beginen, klik dan wat woorden bij elkaar')
         self.label_intro.mousePressEvent = self.start_question
         self.label_intro.setAlignment(Qt.AlignCenter)
-        self.label_intro.show()
+        self.label_intro.hide()
 
         self.button1 = QPushButton("Button 1 text", self)
         self.button1.move(20, 80)
@@ -49,13 +49,9 @@ class FeedMe(QWidget):
         self.button2.hide()
         self.button2.clicked.connect(lambda:self.button_clicked(2))
 
-        self.setGeometry(300, 300, 480, 300)
-        self.setWindowTitle('Mooie demo app')
-        self.show()
-        self.update_question()
-
         self.label_image = QLabel(self)
         self.label_image.setPixmap(QPixmap("background.jpg"))
+        self.label_image.hide()
         self.label_text = QLabel(self)
         self.label_text.move(20, 20)
         self.label_text.setFont(QFont('SansSerif', 32))
@@ -63,6 +59,24 @@ class FeedMe(QWidget):
         self.label_text.setMaximumWidth(460)
         self.label_text.setMinimumWidth(460)
         self.label_text.setWordWrap(True)
+        self.label_text.hide()
+
+        self.setGeometry(300, 300, 480, 300)
+        self.setWindowTitle('Mooie demo app')
+        self.show()
+        self.reset_app()
+
+    def reset_app(self):
+        global question, aChosen, bChosen
+        question = 0
+        aChosen = 0
+        bChosen = 0
+        self.label_image.hide()
+        self.label_text.hide()
+        self.button1.hide()
+        self.button2.hide()
+        self.label_intro.show()
+        self.update_question()
 
     def start_question(self, press):
         if press:
