@@ -28,7 +28,7 @@ LIST_B = [
     'weerzinwekkend', 'mottig'
 ]
 
-INTRO = 'Klik hier om te beginen, klik dan wat woorden bij elkaar'
+INTRO = 'Klik hier om te beginen, klik dan vervolgens je huidige humeur bij elkaar'
 PAYOFF = 'Je koos voornamelijk %s dingen!'
 WORD_A = 'mooie'
 WORD_B = 'lelijke'
