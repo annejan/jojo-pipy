@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from PyQt5.QtWidgets import QWidget, QPushButton, QApplication, QLabel
 from PyQt5.QtGui import QPixmap, QFont
 from PyQt5.QtCore import Qt
@@ -100,8 +102,8 @@ class FeedMe(QWidget):
     def update_question(self):
         global whichList
         whichList = bool(random.getrandbits(1))
-        self.button1.setText(random.choice((listA, listB)[whichList]))
-        self.button2.setText(random.choice((listB, listA)[whichList]))
+        self.button1.setText(random.choice((listA, listB)[whichList]).title())
+        self.button2.setText(random.choice((listB, listA)[whichList]).title())
 
     def show_label(self):
         global aChosen, bChosen
