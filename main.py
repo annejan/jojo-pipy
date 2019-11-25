@@ -2,7 +2,8 @@
 """
         RaspberryPi Python app FeedMe
 
-© 2019 Jolanda Versteeg and Anne Jan Brouwer
+© 2019 Jolanda Versteeg
+Based on a demo application by Anne Jan Brouwer
 
 Choose some words, get a nice fitting product label.
 Double click the label to reset the app.
@@ -87,7 +88,7 @@ class FeedMe(QWidget):
         self.reset_app(True)
 
     def reset_app(self, press):
-        """Start from scratch (new curstomer)"""
+        """Start from scratch (new customer)"""
         if press:
             self.question = 0
             self.a_chosen = 0
