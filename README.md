@@ -12,6 +12,7 @@ Python3 Qt5
 
 ```bash
 sudo apt-get install python3 python3-pyqt5
+pip3 install PyQt5
 ```
 
 Running
