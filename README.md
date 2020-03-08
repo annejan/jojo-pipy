@@ -9,9 +9,12 @@ Requirements
 --
 
 Python3 Qt5
-
 ```bash
 sudo apt-get install python3 python3-pyqt5 qt5-qmake qt5-default
+```
+
+Manually if needed:
+```bash
 wget https://www.riverbankcomputing.com/static/Downloads/sip/4.19.21/sip-4.19.21.tar.gz
 tar xvf sip-4.19.21.tar.gz
 cd sip-4.19.21
