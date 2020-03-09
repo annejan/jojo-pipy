@@ -29,8 +29,8 @@ class FeedMe(QWidget):
         self.label_intro = QLabel(self)
         self.label_intro.move(20, 20)
         self.label_intro.setFont(QFont('SansSerif', 32))
-        self.label_intro.setMaximumWidth(440)
-        self.label_intro.setMinimumWidth(440)
+        self.label_intro.setMaximumWidth(280)
+        self.label_intro.setMinimumWidth(280)
         self.label_intro.setWordWrap(True)
         self.label_intro.setText(product.INTRO)
         self.label_intro.setAlignment(Qt.AlignCenter)
@@ -38,14 +38,14 @@ class FeedMe(QWidget):
         self.label_intro.mousePressEvent = self.start_question
 
         self.button1 = QPushButton("Button 1 text", self)
-        self.button1.move(20, 80)
-        self.button1.resize(220, 80)
+        self.button1.move(80, 80)
+        self.button1.resize(160, 80)
         self.button1.hide()
         self.button1.clicked.connect(lambda: self.button_clicked(1))
 
         self.button2 = QPushButton("Button 2 text", self)
-        self.button2.move(240, 80)
-        self.button2.resize(220, 80)
+        self.button2.move(80, 240)
+        self.button2.resize(160, 80)
         self.button2.hide()
         self.button2.clicked.connect(lambda: self.button_clicked(2))
 
@@ -56,8 +56,8 @@ class FeedMe(QWidget):
         self.label_text.move(20, 20)
         self.label_text.setFont(QFont('SansSerif', 32))
         self.label_text.setStyleSheet('color: darkblue')
-        self.label_text.setMaximumWidth(460)
-        self.label_text.setMinimumWidth(460)
+        self.label_text.setMaximumWidth(300)
+        self.label_text.setMinimumWidth(300)
         self.label_text.setWordWrap(True)
         self.label_text.hide()
         self.label_text.mouseDoubleClickEvent = self.reset_app
@@ -65,18 +65,18 @@ class FeedMe(QWidget):
         self.label_back.move(20, 20)
         self.label_back.setFont(QFont('SansSerif', 16))
         self.label_back.setStyleSheet('color: darkblue')
-        self.label_back.setMaximumWidth(460)
-        self.label_back.setMinimumWidth(460)
+        self.label_back.setMaximumWidth(300)
+        self.label_back.setMinimumWidth(300)
         self.label_back.setWordWrap(True)
         self.label_back.hide()
         self.label_back.mouseDoubleClickEvent = self.reset_app
         self.flip_button = QPushButton("<", self)
-        self.flip_button.move(440, 260)
+        self.flip_button.move(280, 440)
         self.flip_button.resize(40, 40)
         self.flip_button.hide()
         self.flip_button.clicked.connect(self.toggle_label)
 
-        self.setGeometry(0, 0, 480, 300)
+        self.setGeometry(0, 0, 320, 480)
         self.setWindowTitle('Mooie demo app')
         self.show()
         # self.showFullScreen()     # enable to run full screen on Pi 😄
