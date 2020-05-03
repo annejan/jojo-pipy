@@ -121,8 +121,8 @@ class FeedMe(QWidget):
     def update_question(self):
         """Choose two new words"""
         self.which_list = bool(random.getrandbits(1))
-        self.button1.setText(random.choice((product.LIST_A, product.LIST_B)[self.which_list]).title())
-        self.button2.setText(random.choice((product.LIST_B, product.LIST_A)[self.which_list]).title())
+        self.button1.setText(random.choice((product.LIST_A, product.LIST_B)[self.which_list]))
+        self.button2.setText(random.choice((product.LIST_B, product.LIST_A)[self.which_list]))
 
     def show_label(self):
         """Show payoff label"""
