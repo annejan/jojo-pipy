@@ -16,7 +16,7 @@ LIST_A = [
     'Meal kits',
     'Ready meals',
     'Takeaways',
-    'Addes vitamines',
+    'Added vitamins',
     'Familiar foods',
     'Fresh and tasty',
     'Crunchy',
@@ -25,7 +25,7 @@ LIST_A = [
     'Frozen',
     'Instant',
     'Fussy eater',
-    'Pre-cutted'
+    'Pre-sliced'
 ]
 LIST_B = [
     'Eat sensibility',
@@ -44,7 +44,7 @@ LIST_B = [
     'Fresh is important',
     'Additive free',
     'Slow cooking',
-    'Home cutted'
+    'Hand cut'
 ]
 INTRO = 'Klik hier om te beginen, klik dan vervolgens je huidige humeur bij elkaar'
 PAYOFF = 'Je koos voornamelijk %s dingen!'
