@@ -2,7 +2,7 @@
 """
         RaspberryPi Python app Product Label
 
-© 2019 Jolanda Versteeg
+© 2019 - 2020 Jolanda Versteeg
 Based on a demo application by Anne Jan Brouwer
 
 Choose some words, get a nice fitting product label.
@@ -106,7 +106,7 @@ class FeedMe(QWidget):
             self.button2.show()
 
     def button_clicked(self, button):
-        """You have clicked a button, let's add some points to A of B"""
+        """You have clicked a button, let's add some points to A or B"""
         if (not self.which_list and button == 1) or (self.which_list and button == 2):
             self.a_chosen += 1
         else:
