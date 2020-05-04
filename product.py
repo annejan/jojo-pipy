@@ -25,7 +25,8 @@ LIST_A = [
     'Frozen',
     'Instant',
     'Fussy eater',
-    'Pre-sliced'
+    'Pre-sliced',
+    'Enriched'
 ]
 LIST_B = [
     'Eat sensibility',
@@ -44,7 +45,8 @@ LIST_B = [
     'Fresh is important',
     'Additive free',
     'Slow cooking',
-    'Hand cut'
+    'Unsliced',
+    'Locally produced'
 ]
 INTRO = 'Klik hier om te beginen, klik dan vervolgens je huidige humeur bij elkaar'
 PAYOFF = 'Je koos voornamelijk %s dingen!'
