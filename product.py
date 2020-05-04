@@ -50,8 +50,14 @@ LIST_B = [
 ]
 INTRO = 'Klik hier om te beginen, klik dan vervolgens je huidige humeur bij elkaar'
 PAYOFF = 'Je koos voornamelijk %s dingen!'
-WORD_A = 'convenience'
-WORD_B = 'sustainable'
+WORD_A = 'This jam is produced year round on a large scale, to ensure constant quality.\n' \
+         'The production facilities meet the highest hygiene standards and the strawberries were grown in controlled ' \
+         'indoor areas, decreasing the environmental impact and amount of spill. Due to this process, '\
+         'this strawberry jam is a responsible choice.'
+WORD_B = 'For this strawberry jam only the most colorful and juicy strawberries were used. '\
+         'Picked by hand from the fields of local strawberry farms. '\
+         'Due to production on open fields in the fresh air and no use of chemicals, this jam is 100 percent natural.\n'\
+         'Note that the flavor may differ depending on season and harvest.'
 TITLE = 'Convenience %s Sustainable %s'
 IMAGE = 'background.jpg'
 BACK_TEXT = 'Dit product bevat %s dingen, daarnaast bevat het natuurlijk ook ingrediënten en heeft voedingswaarde.\n' \
