@@ -48,8 +48,8 @@ LIST_B = [
     'Unsliced',
     'Locally produced'
 ]
-INTRO = 'Klik hier om te beginen, klik dan vervolgens je huidige humeur bij elkaar'
-PAYOFF = 'Je koos voornamelijk %s dingen!'
+INTRO = 'Good morning, almost ready for breakfast. What do you like today?\n\nFind my jam!'
+PAYOFF = '%s'
 WORD_A = 'This jam is produced year round on a large scale, to ensure constant quality.\n' \
          'The production facilities meet the highest hygiene standards and the strawberries were grown in controlled ' \
          'indoor areas, decreasing the environmental impact and amount of spill. Due to this process, '\

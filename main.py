@@ -28,7 +28,7 @@ class FeedMe(QWidget):
         self.show_front = True
         self.label_intro = QLabel(self)
         self.label_intro.move(20, 20)
-        self.label_intro.setFont(QFont('SansSerif', 32))
+        self.label_intro.setFont(QFont('SansSerif', 28))
         self.label_intro.setMaximumWidth(280)
         self.label_intro.setMinimumWidth(280)
         self.label_intro.setWordWrap(True)
@@ -37,6 +37,15 @@ class FeedMe(QWidget):
         self.label_intro.hide()
         self.label_intro.mousePressEvent = self.start_question
 
+        self.label_choice = QLabel(self)
+        self.label_choice.move(20, 20)
+        self.label_choice.setFont(QFont('SansSerif', 17))
+        self.label_choice.setMaximumWidth(280)
+        self.label_choice.setMinimumWidth(280)
+        self.label_choice.setWordWrap(True)
+        self.label_choice.setText('Today I like...')
+        self.label_choice.setAlignment(Qt.AlignCenter)
+        self.label_choice.hide()
         self.button1 = QPushButton("Button 1 text", self)
         self.button1.move(80, 80)
         self.button1.resize(160, 80)
@@ -54,10 +63,10 @@ class FeedMe(QWidget):
         self.label_image.hide()
         self.label_text = QLabel(self)
         self.label_text.move(20, 20)
-        self.label_text.setFont(QFont('SansSerif', 32))
+        self.label_text.setFont(QFont('SansSerif', 17))
         self.label_text.setStyleSheet('color: darkblue')
-        self.label_text.setMaximumWidth(300)
-        self.label_text.setMinimumWidth(300)
+        self.label_text.setMaximumWidth(280)
+        self.label_text.setMinimumWidth(280)
         self.label_text.setWordWrap(True)
         self.label_text.hide()
         self.label_text.mouseDoubleClickEvent = self.reset_app
@@ -65,8 +74,8 @@ class FeedMe(QWidget):
         self.label_back.move(20, 20)
         self.label_back.setFont(QFont('SansSerif', 16))
         self.label_back.setStyleSheet('color: darkblue')
-        self.label_back.setMaximumWidth(300)
-        self.label_back.setMinimumWidth(300)
+        self.label_back.setMaximumWidth(280)
+        self.label_back.setMinimumWidth(280)
         self.label_back.setWordWrap(True)
         self.label_back.hide()
         self.label_back.mouseDoubleClickEvent = self.reset_app
@@ -75,6 +84,11 @@ class FeedMe(QWidget):
         self.flip_button.resize(40, 40)
         self.flip_button.hide()
         self.flip_button.clicked.connect(self.toggle_label)
+        self.restart_button = QPushButton("&", self)
+        self.restart_button.move(10, 440)
+        self.restart_button.resize(40, 40)
+        self.restart_button.hide()
+        self.restart_button.clicked.connect(self.reset_app)
 
         self.setGeometry(0, 0, 320, 480)
         self.setWindowTitle('Mooie demo app')
@@ -84,23 +98,25 @@ class FeedMe(QWidget):
 
     def reset_app(self, press):
         """Start from scratch (new customer)"""
-        if press:
-            self.question = 0
-            self.a_chosen = 0
-            self.b_chosen = 0
-            self.show_front = True
-            self.label_image.hide()
-            self.label_text.hide()
-            self.label_back.hide()
-            self.flip_button.hide()
-            self.button1.hide()
-            self.button2.hide()
-            self.label_intro.show()
-            self.update_question()
+        self.question = 0
+        self.a_chosen = 0
+        self.b_chosen = 0
+        self.show_front = True
+        self.label_image.hide()
+        self.label_text.hide()
+        self.label_back.hide()
+        self.flip_button.hide()
+        self.restart_button.hide()
+        self.label_choice.hide()
+        self.button1.hide()
+        self.button2.hide()
+        self.label_intro.show()
+        self.update_question()
 
     def start_question(self, press):
         """Start asking questions"""
         if press:
+            self.label_choice.show()
             self.label_intro.hide()
             self.button1.show()
             self.button2.show()
@@ -128,6 +144,7 @@ class FeedMe(QWidget):
         """Show payoff label"""
         text = product.PAYOFF % (product.WORD_A, product.WORD_B)[self.a_chosen < self.b_chosen]
         back_text = product.BACK_TEXT % (product.WORD_A, product.WORD_B)[self.a_chosen < self.b_chosen]
+        self.label_choice.hide()
         self.button1.hide()
         self.button2.hide()
         self.label_image.show()
@@ -135,6 +152,7 @@ class FeedMe(QWidget):
         self.label_back.setText(back_text)
         self.label_text.show()
         self.flip_button.show()
+        self.restart_button.show()
         self.setWindowTitle(text)
 
     def toggle_label(self):
