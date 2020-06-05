@@ -9,24 +9,24 @@ import datetime
 QUESTIONS = 7
 
 LIST_A = [
-    'Ik wil wel koken maar wel makkelijk',
+    'Ik wil wel koken\nmaar wel makkelijk',
     'Comfy food is oké',
-    'Wat is er mis met bestellen?',
-    'Rummikub is voor mij plezier en ontspanning',
-    'Die Iglo risotto met groente uit de magnetron is ook prima',
-    'Grown in controlled indoor areas',
-    'Always the same look and feel',
-    'Assured of constant quality and hygiene'
+    'Wat is er mis\nmet bestellen?',
+    'Rummikub is voor mij\nplezier en ontspanning',
+    'Die Iglo risotto met\ngroente uit de magnetron\nis ook prima',
+    'Grown in controlled\nindoor areas',
+    'Always the same\nlook and feel',
+    'Assured of constant\nquality and hygiene'
 ]
 LIST_B = [
-    'Koken, is voor mij het zand van de piepers boenen',
-    'Geef mij maar een wortel want gezond',
-    'Gezonde afhaalmaaltijden bestaan niet',
-    'Joggen in het park geeft mij plezier en ik ben goed bezig',
-    'Mijn risotto kost mij een uur maar dan weet ik wat erin zit en dat is beter',
-    'Handpicked products from local fields',
-    'Flavor, color and shape may differ',
-    'Fresh air and no chemicals'
+    'Koken, is voor mij het\nzand van de piepers boenen',
+    'Geef mij maar een wortel\nwant gezond',
+    'Gezonde afhaalmaaltijden\nbestaan niet',
+    'Joggen in het park geeft\nmij plezier en ik ben\ngoed bezig',
+    'Mijn risotto kost mij een\nuur maar dan weet ik wat\nerin zit endat is beter',
+    'Handpicked products\nfrom local fields',
+    'Flavor, color and\nshape may differ',
+    'Fresh air and\nno chemicals'
 ]
 INTRO = 'Good morning, almost ready for breakfast. What do you like today?\n\nFind my jam!'
 PAYOFF = '%s'

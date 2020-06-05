@@ -46,15 +46,16 @@ class FeedMe(QWidget):
         self.label_choice.setText('Today I like...')
         self.label_choice.setAlignment(Qt.AlignCenter)
         self.label_choice.hide()
+
         self.button1 = QPushButton("Button 1 text", self)
-        self.button1.move(80, 80)
-        self.button1.resize(160, 80)
+        self.button1.move(40, 80)
+        self.button1.resize(240, 80)
         self.button1.hide()
         self.button1.clicked.connect(lambda: self.button_clicked(1))
 
         self.button2 = QPushButton("Button 2 text", self)
-        self.button2.move(80, 240)
-        self.button2.resize(160, 80)
+        self.button2.move(40, 240)
+        self.button2.resize(240, 80)
         self.button2.hide()
         self.button2.clicked.connect(lambda: self.button_clicked(2))
 
@@ -93,7 +94,7 @@ class FeedMe(QWidget):
         self.setGeometry(0, 0, 320, 480)
         self.setWindowTitle('Mooie demo app')
         self.show()
-        # self.showFullScreen()     # enable to run full screen on Pi 😄
+        self.showFullScreen()     # enable to run full screen on Pi 😄
         self.reset_app(True)
 
     def reset_app(self, press):
