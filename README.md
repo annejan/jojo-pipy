@@ -1,7 +1,7 @@
 RaspberyPi Python app FeedMe
 ==
 
-©️ 2019 Jolanda Versteeg and Anne Jan Brouwer
+©️ 2019-2020 Jolanda Versteeg and Anne Jan Brouwer
 
 Choose some words, get a nice label 😄
 

@@ -9,44 +9,24 @@ import datetime
 QUESTIONS = 7
 
 LIST_A = [
-    'Have a sweet tooth',
-    'Quick & easy',
-    'Fried',
-    'Home delivery',
-    'Meal kits',
-    'Ready meals',
-    'Takeaways',
-    'Added vitamins',
-    'Familiar foods',
-    'Fresh and tasty',
-    'Crunchy',
-    'Traditionally prepared',
-    'Improved flavor',
-    'Frozen',
-    'Instant',
-    'Fussy eater',
-    'Pre-sliced',
-    'Enriched'
+    'Ik wil wel koken maar wel makkelijk',
+    'Comfy food is oké',
+    'Wat is er mis met bestellen?',
+    'Rummikub is voor mij plezier en ontspanning',
+    'Die Iglo risotto met groente uit de magnetron is ook prima',
+    'Grown in controlled indoor areas',
+    'Always the same look and feel',
+    'Assured of constant quality and hygiene'
 ]
 LIST_B = [
-    'Eat sensibility',
-    'Five a day',
-    'Try new foods',
-    'Experimental',
-    'Natural',
-    'Organic',
-    'Mindful eating',
-    'New world foods',
-    'Clean label',
-    'Sustainable',
-    'It may take some effort',
-    'A critical view',
-    'Health',
-    'Fresh is important',
-    'Additive free',
-    'Slow cooking',
-    'Unsliced',
-    'Locally produced'
+    'Koken, is voor mij het zand van de piepers boenen',
+    'Geef mij maar een wortel want gezond',
+    'Gezonde afhaalmaaltijden bestaan niet',
+    'Joggen in het park geeft mij plezier en ik ben goed bezig',
+    'Mijn risotto kost mij een uur maar dan weet ik wat erin zit en dat is beter',
+    'Handpicked products from local fields',
+    'Flavor, color and shape may differ',
+    'Fresh air and no chemicals'
 ]
 INTRO = 'Good morning, almost ready for breakfast. What do you like today?\n\nFind my jam!'
 PAYOFF = '%s'
