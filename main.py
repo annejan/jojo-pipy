@@ -43,7 +43,7 @@ class FeedMe(QWidget):
         self.label_choice.setMaximumWidth(280)
         self.label_choice.setMinimumWidth(280)
         self.label_choice.setWordWrap(True)
-        self.label_choice.setText('Today I like...')
+        self.label_choice.setText('I prefer...')
         self.label_choice.setAlignment(Qt.AlignCenter)
         self.label_choice.hide()
 
